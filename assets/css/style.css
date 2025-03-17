@@ -1,0 +1,828 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces&family=Lato&family=Oswald&display=swap");
+
+/*--Ajustes gerais do site--*/
+
+:root{
+  --cor-primaria: #dec7a7;
+  --cor-secundaria: #c4a47c;
+  --cor-terciaria: #fff;
+  --cor-quaternaria: #acacac;
+  --cor-textos: #666;
+  --cor-bg: #F8F5EE;
+}
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+body{
+background-color: var(--cor-bg);
+max-height: 1000vh;
+max-width: 1000vw;
+margin: 0 auto;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+/*--Configurações do Header do Site--*/
+
+.topo {
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+  background-color: var(--cor-primaria);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.menu-links a{
+  margin: 10px;
+  font-size: 18px;
+  font-family: "Oswald", sans-serif;
+  font-weight: 700;
+  text-decoration: none;
+  text-shadow: 1px 1px 2px #000000;
+  letter-spacing: 2px;
+  color: var(--cor-terciaria);
+}
+.topo img {
+  width: 250px;
+
+}
+
+/*--Configurações do Grid de Localização, WhatsApp e Atendimento--*/
+
+.secao-informacoes-bg{
+  background-color: var(--cor-terciaria);
+  max-width: 70%;
+  margin: 0 auto;
+  position: absolute;
+  top: 90%;
+  left: 0;
+  right: 0;
+}
+
+.informacoes-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  text-align: center;
+  padding: 20px;
+}
+
+.informacoes-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.informacoes-item img {
+  width: 60px;
+}
+
+.informacoes-item h2 {
+  font-size: 1.4rem;
+  color: var(--cor-secundaria);
+  font-family: "Oswald", sans-serif;
+}
+
+.informacoes-item p {
+  font-size: 1rem;
+  color: var(--cor-textos);
+  font-family: "Lato", "sans-serif";
+}
+
+/*--Configurações do Grid "A melhor barbearia da regiao""--*/
+
+.grid-sobre {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 20px; 
+  padding: 200px 100px 0 100px;
+  margin: 0 130px 0px 130px;
+}
+
+.sobre-apresentacao {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.sobre-apresentacao h2{
+  font-size: 3rem;
+  text-transform: uppercase;
+  font-family: "Oswald", sans-serif;
+  font-weight: bolder;
+}
+
+.sobre-apresentacao p{
+  font-size: 1rem;
+  font-family: "Lato", sans-serif;
+}
+
+.sobre-destaque {
+  display: grid;
+  grid-template-columns: 1fr 1fr; 
+  grid-template-rows: auto auto; 
+  gap: 5px 15px; 
+
+}
+
+.sobre-destaque h3{
+  font-family: "Lato", sans-serif;
+  font-size: 3rem;
+  font-weight: bold;
+}
+.sobre-destaque p {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.sobre-destaque span {
+color: var(--cor-secundaria);
+}
+.grid-corte {
+  max-width: 100%; 
+  height: auto; 
+}
+
+/*--V Configurações do Grid geral 4 Colunas V--*/
+.box-background{
+  display: flex;
+  justify-self: center;
+  background-color: var(--cor-terciaria);
+  width: 70vw;
+
+}
+
+.grid-geral {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px; 
+  padding: 30px;
+}
+
+.box-textos{
+  letter-spacing: 1px;
+  padding-top: 50px;
+}
+
+.box-textos h2 {
+  margin-bottom: 20px;
+  font-size: 3rem;
+  font-family: "Oswald", sans-serif;
+  color: #c4a47c;
+  text-align: center;
+}
+
+.box-textos h3{
+  margin-bottom: 40px;
+  font-size: 1.5rem;
+  font-family: "Oswald", sans-serif;
+  color: var(--cor-textos);
+  text-align: center;
+}
+
+.grid-item {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  padding: 30px; 
+}
+
+.grid-item div {
+  display: flex;
+  flex-direction: column;
+}
+
+.grid-item h4 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  letter-spacing: 3px;
+  font-family: "Oswald", sans-serif;
+  color: var(--cor-textos);
+}
+
+.grid-item p {
+  font-size: 1rem;
+  font-family: "Lato", "sans-serif";
+  color: #666;
+}
+
+.grid-item span {
+  font-weight: bold;
+  font-size: 2rem;
+  color: var(--cor-secundaria)
+}
+
+.grid-item img{
+  width: 15%;
+}
+
+.equipe{
+  margin: 0 auto;
+  line-height: normal;
+}
+/*--Configurações do Efeito Parallax--*/
+
+.parallax1,
+.parallax2,
+.parallax3,
+.parallax4,
+.parallax5,
+.parallax6 {
+  position: relative;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+}
+.parallax1 {
+  background-image: url(../images/corte-de-cabelo.jpg);
+  height: 100vh;
+
+}
+.parallax1 h1{
+  top: 35%;
+  right: 0;
+  left: 0;
+  position: absolute;
+  color: var(--cor-terciaria);
+  text-align: center;
+  font-weight: 400;
+  font-family: "Oswald", sans-serif;
+  font-size: 80px;
+  text-shadow: 1px 1px 2px #000000;
+}
+
+.parallax2 {
+  background-image: url(/assets/images/tesouras.jpg);
+  height: 50vh;
+}
+.parallax2 h3,
+.parallax3 h3 {
+  width: 500px;
+  padding: 10px;
+  position: relative;
+  top: 45%;
+  right: 0;
+  left: 0;
+  margin: auto;
+  font-size: 24px;
+  font-weight: 400;
+  font-style: italic;
+  font-family: "Oswald", sans-serif;
+  text-align: center;
+  letter-spacing: 2px;
+  background-color: var(--cor-primaria);
+  color: var(--cor-terciaria);
+}
+.parallax3 {
+  background-image: url(../images/objetos.jpg);
+  height: 50vh;
+}
+
+.parallax4 {
+  background-image: url(assets/parallax-imagem4.png);
+  height: 100vh;
+}
+.parallax4 iframe {
+  position: absolute;
+  top: 18%;
+  left: 0%;
+  right: 0%;
+  margin: auto;
+}
+.parallax5 {
+  background-image: url(../images/equipamentos-horario.jpg);
+  height: 85vh;
+}
+.parallax5 h2 {
+  position: absolute;
+  margin: 0 auto;
+  top: 10%;
+  right: 0;
+  left: 0;
+  text-shadow: 1px 1px 2px #000000;
+  font-family: "Oswald", sans-serif;
+  text-align: center;
+  letter-spacing: 10px;
+  color: var(--cor-terciaria);
+}
+.parallax6{
+  background-image: url(../images/barba.jpg);
+  height: 100vh;
+  margin-top: 50px;
+}
+
+.parallax6 h1{
+  top: 35%;
+  right: 10%;
+  left: 10%;
+  position: absolute;
+  color: var(--cor-terciaria);
+  text-align: center;
+  font-weight: 400;
+  font-family: "Oswald", sans-serif;
+  font-size: 5rem;
+  line-height: 90px;
+  text-shadow: 1px 1px 2px #000000;
+}
+
+/*--Configurações de botão do Parallax 1 e 6--*/
+
+.botao-parallax{
+  display: flex;
+  justify-content: space-evenly;
+  text-align: center;
+  position: absolute;
+  top: 60%;
+  left: 0;
+  right: 0;
+  font-family: "Lato", "sans-serif";
+}
+
+.parallax6 .botao-parallax{
+  top: 70%;
+}
+.botao{
+  display: flex;
+  justify-content: center;
+  padding: 50px;
+  text-align: center;
+  font-family: "Lato", "sans-serif";
+}
+
+.botao-agendamento, .botao-servicos{
+  text-decoration: none;
+}
+
+.botao-agendamento{
+  padding: 20px;
+  background: var(--cor-secundaria);
+  color: var(--cor-terciaria);
+  font-weight: 700;
+}
+
+.botao-servicos{
+  padding: 20px;
+  border: 2px solid var(--cor-terciaria);
+  color: var(--cor-secundaria);
+  font-weight: 700;
+}
+
+/*---------------------*/
+
+.lista-horario {
+  max-width: 768px;
+  position: absolute;
+  margin: 0 auto;
+  bottom: 20%;
+  right: 0;
+  left: 0;
+  font-family: "Oswald", sans-serif;
+  list-style: none;
+}
+.lista-horario li {
+  position: relative;
+}
+.lista-horario li h3 {
+  margin-bottom: 20px;
+  color: var(--cor-terciaria);
+  text-align: left;
+}
+.lista-horario li div {
+  width: 70%;
+  height: 1px;
+  position: absolute;
+  margin: 0 auto;
+  top: 50%;
+  right: 0;
+  left: 0;
+  background-color: var(--cor-terciaria);
+}
+
+.lista-horario li p,
+.destaque-texto {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-weight: 700;
+  font-family: "Oswald", sans-serif;
+}
+
+.lista-horario li p {
+  color: var(--cor-terciaria);
+}
+
+.footer {
+  position: relative;
+  padding: 20px 0;
+  line-height: 34px;
+  letter-spacing: 2px;
+  font-weight: 600;
+  font-family: "Lato", sans-serif;
+  text-align: center;
+  background-color: #000000;
+  color: #fff;
+}
+.footer span {
+  color: #c4a47c;
+  text-decoration: none;
+}
+.seta {
+  display: inline-block;
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  bottom: 80px;
+  right: 50px;
+  background-image: url(assets/seta-para-cima.png);
+  background-position: center;
+  background-size: cover;
+  background-color: #c4a47c;
+  border-radius: 4px;
+}
+a:visited {
+  color: none;
+}
+
+.mapa{
+  padding-top: 50px;
+}
+
+
+
+.galeria {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+  padding: 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.galeria__item {
+  overflow: hidden;
+}
+
+.galeria__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease-in-out;
+}
+
+.galeria__img:hover {
+  transform: scale(1.05);
+}
+
+/* Ajustes de responsividade */
+@media screen and (max-width: 1024px) {
+  .topo{
+    max-width: 100%;
+    display: block;
+    text-align: center;
+
+  }
+  .topo img{
+    width: 40%;
+  }
+  .menu-links a{
+    font-size: 1.5rem;
+  }
+  .grid-sobre {
+    max-width: 100%;
+    padding: 30% 5% 10% 5%;
+  }
+  .grid-sobre h2{
+    font-size: 1.9rem;
+  }
+  .grid-sobre p{
+    font-size: 1.3rem;
+  }
+  .grid-corte {
+    max-width: 100%;
+    padding-top: 20px;
+  }
+  .parallax1 h1, .parallax6 h1 {
+    font-size: 4rem;
+    top: 40%;
+  }
+  .botao-agendamento, .botao-servicos {
+    padding: 12px;
+    font-size: 1rem;
+  }
+  .informacoes-grid {
+    max-width: 100%;
+  }
+  .informacoes-item{
+    padding: 10px;
+  }
+  .box-textos h2{
+    font-size: 3rem;
+  }
+  .box-textos h3{
+    font-size: 1.9rem;
+  }
+  .mapa{
+    max-width: 90% ;
+  }
+  .parallax2 h3, .parallax3 h3{
+    max-width: 90%;
+  }
+  .botao-parallax{
+    top: 55%;
+  }
+  .parallax6 .botao-parallax{
+    top: 85%;
+  }
+  .lista-horario{
+    margin: 0 auto;
+  }
+  .lista-horario li div {
+    width: 70%;
+    right: 10%;
+  }
+  .lista-horario li p{
+    right: 5%;
+  }
+  .seta{
+    bottom: 70%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+.topo{
+    max-width: 100%;
+    display: block;
+    text-align: center;
+
+  }
+  .topo img{
+    width: 40%;
+  }
+  .menu-links a{
+    font-size: 1rem;
+    text-align: center;
+  }
+  .grid-geral{
+    display: block;
+   }
+  .grid-sobre {
+    width: 100%;
+    display: block;
+    padding: 90% 10% 10% 10%;
+    margin: 0 auto;
+  }
+  .grid-sobre h2{
+    font-size: 1.9rem;
+  }
+  .grid-sobre p{
+    font-size: 1rem;
+  }
+  .grid-corte {
+    max-width: 100%;
+    padding-top: 20px;
+  }
+  .parallax1 h1, .parallax6 h1 {
+    font-size: 2rem;
+    top: 40%;
+  }
+  .botao-agendamento, .botao-servicos {
+    padding: 12px;
+    font-size: 14px;
+  }
+  .informacoes-grid {
+    display: block;
+    max-width: 100%;
+  }
+  .informacoes-item{
+    padding: 10px;
+  }
+  .informacoes-item h2{
+    font-size: 1.2rem;
+  }
+  .informacoes-item p{
+    font-size: 0.9rem;
+  }
+  .informacoes-item img{
+    width: 10%;
+  }
+  .box-textos h2{
+    font-size: 2rem;
+  }
+  .box-textos h3{
+    font-size: 1.2rem;
+  }
+  .mapa{
+    max-width: 90% ;
+  }
+  .parallax2 h3, .parallax3 h3{
+    max-width: 90%;
+  }
+  .botao-parallax{
+    top: 55%;
+  }
+  .parallax6 .botao-parallax{
+    top: 75%;
+  }
+  .lista-horario{
+    margin: 0 auto;
+  }
+  .lista-horario li div {
+    width: 70%;
+    right: 10%;
+  }
+  .lista-horario li p{
+    right: 5%;
+  }
+  .grid-item h4{
+    font-size: 1rem;
+  }
+  .box-background{
+    width: 100%;
+  }
+  .seta{
+    bottom: 70%;
+  }
+  .parallax5 h2{
+    top: 5%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .topo{
+    max-width: 100%;
+    display: block;
+    text-align: center;
+
+  }
+  .topo img{
+    width: 50%
+  }
+  .menu-links a{
+    font-size: 1rem;
+    text-align: center;
+  }
+  .grid-sobre {
+    width: 400px;
+    margin: 0 auto;
+    display: block;
+    padding: 110% 10% 10% 10%;
+  }
+  .grid-sobre h2{
+    font-size: 1.9rem;
+  }
+  .grid-sobre p{
+    font-size: 1rem;
+  }
+  .grid-corte {
+    max-width: 100%;
+    padding-top: 20px;
+  }
+  .parallax1 h1, .parallax6 h1 {
+    font-size: 2rem;
+    top: 40%;
+  }
+  .botao-agendamento, .botao-servicos {
+    padding: 12px;
+    font-size: 14px;
+  }
+  .informacoes-grid {
+    display: block;
+    max-width: 100%;
+  }
+  .informacoes-item{
+    padding: 10px;
+  }
+  .informacoes-item h2{
+    font-size: 1.2rem;
+  }
+  .informacoes-item p{
+    font-size: 0.9rem;
+  }
+  .informacoes-item img{
+    width: 15%;
+  }
+ .grid-geral{
+  display: block;
+ }
+  .box-textos h2{
+    font-size: 2rem;
+  }
+  .box-textos h3{
+    font-size: 1.2rem;
+  }
+  .mapa{
+    max-width: 100% ;
+  }
+  .parallax2 h3, .parallax3 h3{
+    max-width: 90%;
+  }
+  .botao-parallax{
+    top: 55%;
+  }
+  .parallax6 .botao-parallax{
+    top: 75%;
+  }
+  .parallax5 h2{
+    top: 5%;
+  }
+  .lista-horario li div {
+    width: 40%; 
+  }
+  .seta{
+    bottom: 70%;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .topo{
+    max-width: 100%;
+  }
+  .topo img{
+    width: 50%;
+  }
+  .menu-links a{
+    font-size: 0.7rem;
+    text-align: center;
+  }
+  .grid-sobre {
+    max-width: 100%;
+    display: block;
+    padding-top: 150%;
+  }
+  .grid-sobre h2{
+    font-size: 1.9rem;
+  }
+  .grid-sobre p{
+    font-size: 0.9rem;
+  }
+  .grid-corte {
+    max-width: 100%;
+  }
+  .parallax1 h1, .parallax6 h1 {
+    font-size: 2rem;
+    top: 40%;
+
+  }
+  
+  .informacoes-grid {
+    display: block;
+    max-width: 100%;
+  }
+  .informacoes-item{
+    padding: 10px;
+  }
+  .informacoes-item h2{
+    font-size: 1.2rem;
+  }
+  .informacoes-item p{
+    font-size: 0.9rem;
+  }
+  .informacoes-item img{
+    width: 15%;
+  }
+  .box-textos h2{
+    font-size: 2rem;
+  }
+  .box-textos h3{
+    font-size: 1.2rem;
+  }
+  .mapa{
+    max-width: 100% ;
+  }
+  .parallax2 h3, .parallax3 h3{
+    max-width: 90%;
+  }
+  .botao-parallax{
+    top: 55%;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    gap: 20px;
+    
+  }
+  .parallax6 .botao-parallax{
+    top: 75%;
+  }
+  .lista-horario{
+    padding-top: 50%;
+  }
+  .lista-horario li div {
+    width: 30%;
+    right: 10%;
+  }
+  .parallax6 h1{
+    font-size: 2rem;
+    top: 30%;
+    line-height: 200%;
+    
+  }
+}
