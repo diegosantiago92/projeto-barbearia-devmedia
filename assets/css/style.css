@@ -152,8 +152,7 @@ color: var(--cor-secundaria);
 
 /*--V Configurações do Grid geral 4 Colunas V--*/
 .box-background{
-  display: flex;
-  justify-self: center;
+  margin: 0 auto;
   background-color: var(--cor-terciaria);
   width: 70vw;
 
@@ -221,7 +220,7 @@ color: var(--cor-secundaria);
 }
 
 .grid-item img{
-  width: 15%;
+  max-width: 15%;
 }
 
 .equipe{
@@ -488,7 +487,6 @@ a:visited {
     max-width: 100%;
     display: block;
     text-align: center;
-
   }
   .topo img{
     width: 40%;
@@ -554,6 +552,12 @@ a:visited {
   }
   .seta{
     bottom: 70%;
+  }
+  .grid-item img{
+    max-width: 20%;
+  }
+  .box-background{
+    width: 80%;
   }
 }
 
